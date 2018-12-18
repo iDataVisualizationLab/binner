@@ -5,7 +5,7 @@ export function SquareBinner(){
     //     angles = [0, thirdPi, 2*thirdPi, 3*thirdPi, 4*thirdPi, 5*thirdPi];
 
     function pointVal(d){
-        return d.val;
+        return d;
     }
 
     var val0 = 0,
