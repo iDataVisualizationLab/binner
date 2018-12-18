@@ -35,7 +35,8 @@ import _ from "underscore"
             bins = [],
             binner = null,
             binRadius = 0,
-            updateRadius = true;
+            updateRadius = true,
+            binType;
 
         outputValue("calculate", function () {
             points = inputPoints.slice(0);
@@ -95,7 +96,12 @@ import _ from "underscore"
             return window.binnerN;
         });
 
-            outputValue("calculatePoint", function (siginput) {
+        outputValue("binType", function (_) {
+            return arguments.length ? (binType = _, window.binnerN) : binType;
+
+        });
+
+        outputValue("calculatePoint", function (siginput) {
             points = inputPoints.slice(0).concat(siginput);
             inputPoints=points;
             normalizedPoints = points;
