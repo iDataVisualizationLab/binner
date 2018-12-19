@@ -79,7 +79,7 @@ import _ from "underscore"
                         let gridsize = 1/binSize;
                         binner = new SquareBinner().radius(gridsize);//extent from [0, 0] to [1, 1] since we already normalized data.
                         bins = binner.evenbin(normalizedPoints);
-                        binRadius = gridsize/2;
+                        binRadius = gridsize;
                     }else if(!binType || binType==="leader"){
                         binRadius = 1/(binSize*2);
                         binner = new LeaderBinner(normalizedPoints, binRadius);
