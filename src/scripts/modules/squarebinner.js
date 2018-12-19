@@ -29,7 +29,7 @@ export function SquareBinner(){
             if (bin) bin.push(point);
             else {
                 bins.push(bin = binsById[id] = [point]);
-                bin.val = pi.map(d=>(d*dval - (d&1) * dval/2));
+                bin.val = pi.map(d=>(d*dval - (d>0) * dval/2));
             }
         }
 
