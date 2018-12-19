@@ -74,7 +74,7 @@ import _ from "underscore"
 
                     // }else if(!binType || binType==="leader"){
                     // This section uses leader binner
-                    if(binType==="hexagon"){
+                    if(binType==="evenbin"){
                         // This section uses hexagon binning
                         let gridsize = 1/binSize;
                         binner = new SquareBinner().radius(gridsize);//extent from [0, 0] to [1, 1] since we already normalized data.
